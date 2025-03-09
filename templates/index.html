@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolBox - Image Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="notification" id="notification"></div>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <i class="fas fa-toolbox"></i>
+                <span>ToolBox</span>
+            </div>
+            <ul class="navbar-menu">
+                <li class="navbar-item active"><a href="#"><i class="fas fa-image"></i> Image Converter</a></li>
+                <li class="navbar-item"><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+            </ul>
+            <div class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Image Converter</h1>
+            <p class="subtitle">Convert between popular image formats</p>
+        </header>
+
+        <main>
+            <div class="converter-box">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-zone-content">
+                        <img src="{{ url_for('static', filename='images/upload-icon.svg') }}" alt="Upload" class="upload-icon">
+                        <p>Drag and drop your file here</p>
+                        <p>or</p>
+                        <button class="browse-btn">Browse Files</button>
+                        <input type="file" id="fileInput" hidden>
+                    </div>
+                </div>
+
+                <div class="format-selector">
+                    <label for="outputFormat">Convert to:</label>
+                    <select id="outputFormat" class="retro-select">
+                        <option value="">Select output format</option>
+                        <option value="png">PNG</option>
+                        <option value="jpg">JPG</option>
+                        <option value="webp">WEBP</option>
+                        <option value="gif">GIF</option>
+                        <option value="bmp">BMP</option>
+                        <option value="tiff">TIFF</option>
+                        <option value="ico">ICO</option>
+                        <option value="heic">HEIC</option>
+                    </select>
+                </div>
+
+                <button class="convert-btn" id="convertBtn" disabled>Convert</button>
+            </div>
+
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <p>Selected file: <span id="fileName"></span></p>
+                <button class="clear-btn" id="clearBtn">Clear</button>
+            </div>
+
+            <div class="download-section" id="downloadSection" style="display: none;">
+                <div class="download-content">
+                    <img src="{{ url_for('static', filename='images/download-icon.svg') }}" alt="Download" class="download-icon">
+                    <p>Your file is ready!</p>
+                    <a href="#" class="download-btn" id="downloadBtn">Download Converted File</a>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <h2>About ToolBox</h2>
+                <p>ToolBox is a collection of simple yet powerful web tools designed to make your digital life easier.</p>
+                <div class="coming-soon">
+                    <h3>More Tools Coming Soon</h3>
+                    <div class="tools-grid">
+                        <div class="tool-card">
+                            <i class="fas fa-file-pdf"></i>
+                            <h4>PDF Tools</h4>
+                            <p>Compress, merge, and edit PDF files</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-text-height"></i>
+                            <h4>Text Utilities</h4>
+                            <p>Format, count, and manipulate text</p>
+                        </div>
+                        <div class="tool-card">
+                            <i class="fas fa-crop"></i>
+                            <h4>Image Editor</h4>
+                            <p>Resize, crop, and edit images</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loader"></div>
+            <p>Converting...</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>ToolBox</h3>
+                <p>Simple tools for everyday tasks</p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/AdityaB-11/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:adityabhogil.11@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ToolBox. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 
