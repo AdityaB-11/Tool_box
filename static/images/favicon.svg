@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Toolbox body -->
-  <rect x="64" y="160" width="384" height="288" rx="16" fill="#3498db"/>
+  <rect x="64" y="160" width="384" height="288" rx="16" fill="black"/>
   
   <!-- Toolbox top -->
-  <path d="M128 160V112C128 98.7452 138.745 88 152 88H360C373.255 88 384 98.7452 384 112V160H128Z" fill="#2980b9"/>
+  <path d="M128 160V112C128 98.7452 138.745 88 152 88H360C373.255 88 384 98.7452 384 112V160H128Z" fill="#333333"/>
   
   <!-- Handle -->
-  <rect x="208" y="64" width="96" height="24" rx="12" fill="#2c3e50"/>
+  <rect x="208" y="64" width="96" height="24" rx="12" fill="#555555"/>
   
   <!-- Tools inside -->
-  <rect x="112" y="208" width="288" height="16" rx="8" fill="#ecf0f1"/>
-  <rect x="112" y="256" width="288" height="16" rx="8" fill="#ecf0f1"/>
-  <rect x="112" y="304" width="288" height="16" rx="8" fill="#ecf0f1"/>
-  <rect x="112" y="352" width="288" height="16" rx="8" fill="#ecf0f1"/>
+  <rect x="112" y="208" width="288" height="16" rx="8" fill="white"/>
+  <rect x="112" y="256" width="288" height="16" rx="8" fill="white"/>
+  <rect x="112" y="304" width="288" height="16" rx="8" fill="white"/>
+  <rect x="112" y="352" width="288" height="16" rx="8" fill="white"/>
   
   <!-- Image icon overlay -->
-  <rect x="192" y="224" width="128" height="128" rx="8" fill="#2c3e50"/>
-  <rect x="208" y="240" width="96" height="64" rx="4" fill="#ecf0f1"/>
-  <circle cx="232" cy="264" r="12" fill="#e74c3c"/>
-  <path d="M208 304L232 272L256 304H208Z" fill="#27ae60"/>
-  <path d="M256 304L280 264L304 304H256Z" fill="#f39c12"/>
+  <rect x="192" y="224" width="128" height="128" rx="8" fill="#333333"/>
+  <rect x="208" y="240" width="96" height="64" rx="4" fill="white"/>
+  <circle cx="232" cy="264" r="12" fill="#888888"/>
+  <path d="M208 304L232 272L256 304H208Z" fill="#cccccc"/>
+  <path d="M256 304L280 264L304 304H256Z" fill="#aaaaaa"/>
 </svg> 
