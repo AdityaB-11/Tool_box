@@ -9,8 +9,12 @@ from app.utils.file_utils import (
 )
 from app.converters.converter import FileConverter
 
-app = Flask(__name__)
-app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
+# Create the Flask application instance
+application = Flask(__name__)
+application.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
+
+# For compatibility with different WSGI servers
+app = application
 
 @app.route('/')
 def index():
@@ -79,4 +83,4 @@ def download_file(filename):
         return jsonify({'error': str(e)}), 404
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000))) 
