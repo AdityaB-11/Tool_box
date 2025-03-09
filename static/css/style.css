@@ -711,6 +711,8 @@ footer {
     border-radius: 8px;
     box-shadow: var(--shadow-md);
     border: 2px solid var(--primary-color);
+    margin-bottom: 2rem;
+    scroll-margin-top: 80px; /* For smooth scrolling with fixed navbar */
 }
 
 .about-section h2 {
@@ -720,6 +722,21 @@ footer {
     margin-bottom: 1rem;
     text-align: center;
     letter-spacing: 0.1rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
 }
 
 .about-section p {
@@ -810,4 +827,17 @@ footer {
     .coming-soon h3::after {
         right: 15%;
     }
+}
+
+.section-divider {
+    margin: 4rem 0 2rem;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    opacity: 0.5;
+}
+
+/* Add smooth scrolling to the whole page */
+html {
+    scroll-behavior: smooth;
 } 

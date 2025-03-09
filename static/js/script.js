@@ -18,26 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // About section navigation
+    // Navigation scrolling
     const aboutLink = document.querySelector('.navbar-item:not(.active) a');
     const converterBox = document.querySelector('.converter-box');
     const aboutSection = document.querySelector('.about-section');
     const activeNavItem = document.querySelector('.navbar-item.active');
     const imageConverterLink = document.querySelector('.navbar-item.active a');
     
-    // Initially hide the about section
-    aboutSection.style.display = 'none';
-    
     // Handle About link click
     if (aboutLink) {
         aboutLink.addEventListener('click', (e) => {
             e.preventDefault();
-            converterBox.style.display = 'none';
-            aboutSection.style.display = 'block';
             
             // Update active nav item
             activeNavItem.classList.remove('active');
             aboutLink.parentElement.classList.add('active');
+            
+            // Smooth scroll to about section
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
         });
     }
     
@@ -45,12 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (imageConverterLink) {
         imageConverterLink.addEventListener('click', (e) => {
             e.preventDefault();
-            converterBox.style.display = 'block';
-            aboutSection.style.display = 'none';
             
             // Update active nav item
             aboutLink.parentElement.classList.remove('active');
             imageConverterLink.parentElement.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 

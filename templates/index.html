@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToolBox - Image Converter</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.svg') }}" type="image/svg+xml">
+    <link rel="alternate icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/favicon-192.png') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='images/favicon-192.png') }}">
+    <meta name="theme-color" content="#3498db">
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,8 +24,8 @@
                 <span>ToolBox</span>
             </div>
             <ul class="navbar-menu">
-                <li class="navbar-item active"><a href="#"><i class="fas fa-image"></i> Image Converter</a></li>
-                <li class="navbar-item"><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                <li class="navbar-item active"><a href="#top"><i class="fas fa-image"></i> Image Converter</a></li>
+                <li class="navbar-item"><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
             </ul>
             <div class="navbar-toggle" id="navbar-toggle">
                 <i class="fas fa-bars"></i>
@@ -27,7 +34,7 @@
     </nav>
     
     <div class="container">
-        <header>
+        <header id="top">
             <h1>Image Converter</h1>
             <p class="subtitle">Convert between popular image formats</p>
         </header>
@@ -75,7 +82,9 @@
                 </div>
             </div>
             
-            <div class="about-section">
+            <hr class="section-divider" id="about-divider">
+            
+            <div class="about-section" id="about">
                 <h2>About ToolBox</h2>
                 <p>ToolBox is a collection of simple yet powerful web tools designed to make your digital life easier.</p>
                 <div class="coming-soon">
